@@ -1,1 +1,85 @@
 /* You can add global styles to this file, and also import other style files */
+@import '@angular/material/prebuilt-themes/deeppurple-amber.css';
+
+.logo{
+    width: 104.7px;
+    height: 93.86px;
+    left: 631px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+.signUp {
+    margin-top: 189.08px;
+    background: #FFFFFF;
+    border-radius: 37px 0px 0px 0px;
+}
+
+.title{
+    width: 147px;
+height: 47px;
+margin-left: 609px;
+margin-top: 213px;
+
+font-family: Maven Pro;
+font-style: normal;
+font-weight: bold;
+font-size: 40px;
+line-height: 47px;
+/* identical to box height */
+
+
+color: #001B30;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 100%;
+    height: 100%;
+}
+
+.container > .header {
+    display: flex;
+    justify-content: center;
+    order: 1;
+    flex-basis: 10%;
+    text-align: center;
+
+  }
+
+.container > .header > p:nth-child(1) {
+    margin-top: 23.92px;
+    font-family: Maven Pro;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 40px;
+    margin-bottom: 7px;
+}
+
+.container > .header > p:nth-child(2) {
+    margin-top: 81.92px;
+    font-family: Maven Pro;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 23px;
+
+}
+  
+  .container > .footer {
+    flex-basis: 20%;
+    order: 3; /* Assure this is the third element, at the bottom */
+  }
+  
+  .container > .body {
+    flex: 1;
+    order: 2; /* Assure this is the second element, in the middle */
+    /* display: flex; */
+    margin: 0 auto;
+    justify-content: center;
+  }
+
+
+ 

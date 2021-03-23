@@ -1,0 +1,50 @@
+<!-- Login Page View -->
+
+<mat-grid-list class="row" style="background-color: #001B30; text-align: center;" cols="1" [rowHeight]="">
+  <img class="logo" src="../../assets/logo.png"/>
+  <mat-grid-tile class="signUp">
+    <div class="container">
+      <section class="header">
+        <p>Sign In</p>
+      </section>
+      <section class="body">
+        <div fxLayout="column">
+          <form  [formGroup]="loginForm" (ngSubmit)="loginUser(loginForm.value)" class="form">
+           
+            <div fxLayoutAlign="center">
+              <mat-form-field fxFlex.sm="cols" style="width:50%; margin-right: 1rem;">
+                <mat-label>Enter Email Id</mat-label>
+                <input matInput placeholder="Enter Email-ID" formControlName="email">
+                <span matPrefix style="margin: 2px;"><mat-icon>local_post_office</mat-icon></span>
+                <mat-error *ngIf="!loginForm.controls['email'].valid && loginForm.controls['email'].touched">
+                  {{ getErrorEmail() }}
+                </mat-error>
+              </mat-form-field>
+            </div>
+
+            <div fxLayoutAlign="center">
+              <mat-form-field fxFlex.sm="cols" style="width:50%; margin-right: 1rem;">
+                <mat-label>Enter Password</mat-label>
+                <input matInput placeholder="Enter password" formControlName="password" [type]="hide ? 'password' : 'text'">
+                <span matPrefix style="margin: 2px;"><mat-icon>person_outline</mat-icon></span>
+                <mat-icon matSuffix (click)="hide = !hide">{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+                <mat-error *ngIf="!loginForm.controls['password'].valid && loginForm.controls['password'].touched">
+                  {{ getErrorPassword() }}
+                </mat-error>
+              </mat-form-field>
+            </div>
+
+            <div fxLayoutAlign="center">
+              <button mat-raised-button style="background-color: #001B30 ; border-radius: 25px;color: white;width: 184px;" type="submit" class="button" >Sign In</button>
+            </div>
+
+          </form>
+          <div fxLayoutAlign="center">
+            <p>Not a member?<span style="font-weight: bold;"><a routerLink="/">Sign Up</a></span></p>
+          </div>
+        </div>
+      </section>
+    </div>
+  </mat-grid-tile>
+</mat-grid-list>
+
